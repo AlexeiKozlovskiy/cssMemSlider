@@ -12,7 +12,7 @@
   }
   
   .slider-title {
-    font-size: 35px;
+    font-size: 25px;
     padding: 30px 0;
     color: #D2691E;
   }
@@ -20,7 +20,7 @@
   #slider {
     display: flex;
     flex-direction: column;
-    width: 800px;
+    width: 700px;
     max-width: 100%;
     margin: 0 auto;
     text-align: center;
@@ -50,12 +50,12 @@
   }
   .wrapper {
     display: flex;
-    margin-top:100px;
+    margin-top: 20px;
     height: 100px;
   }
   .slide-text {
     flex: 0 1 80%;
-    font-size: 25px;
+    font-size: 18px;
     text-align: left;
     font-style: italic;
   }
@@ -74,18 +74,18 @@
     display: inline-block;
     justify-content: center;
     align-items: center;
-    width: 30px;
-    height: 50px;
+    width: 20px;
+    height: 30px;
     cursor: pointer;
-    margin: 0 10px;
+    margin: 0 5px;
   }
   #bullets span {
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
     background-color: #DAA520;
-    border: 2px solid #000000;
+    border: 1px solid #000000;
     transition: all 0.3s ease;
   }
   
@@ -140,6 +140,7 @@
     }
     .slider-title {
       padding: 20px 0;
+      font-size: 18px;
     }
     .wrapper {
       flex-direction: column;
@@ -155,16 +156,19 @@
     }
     .slide-text {
         order: 2;
-        width: 60%;
+        width: 64%;
+        margin-bottom: 30px;
+        font-size: 16px;
       }
 
     #bullets label {
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
+      margin: 0 1px;
     }
     #bullets span {
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
     }
   }
   
