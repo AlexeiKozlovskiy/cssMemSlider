@@ -32,7 +32,7 @@
 
   #slides .inner {
     width: 400%;
-    transition: margin-left 0.5s cubic-bezier(0.50, 1, 0.50, 1);
+    transition: margin-left 0.5s cubic-bezier(0.40, 1, 0.50, 1);
   }
   #slides .slide {
     float: left;
