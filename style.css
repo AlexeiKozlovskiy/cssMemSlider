@@ -1,0 +1,173 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: #FFEBCD	;
+    color: #D2691E;
+    font-family: sans-serif;
+  }
+  
+  .slider-title {
+    font-size: 25px;
+    padding: 30px 0;
+    color: #D2691E;
+  }
+  
+  #slider {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 10px;
+  }
+  #slider input[type="radio"] {
+    display: none;
+  }
+
+  #slides .inner {
+    width: 400%;
+    transition: margin-left 0.5s cubic-bezier(0.40, 1, 0.40, 1);
+  }
+  #slides .slide {
+    float: left;
+    width: 25%;
+    height: 100%;
+  }
+  #slides .slide img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #overflow {
+    width: 100%;
+    overflow: hidden;
+  }
+  .wrapper {
+    display: flex;
+    margin-top: 20px;
+    height: 100px;
+  }
+  .slide-text {
+    flex: 0 1 80%;
+    font-size: 18px;
+    text-align: left;
+    font-style: italic;
+  }
+  .slide-text div:nth-child(1),
+  .slide-text div:nth-child(2),
+  .slide-text div:nth-child(3),
+  .slide-text div:nth-child(4) {
+    display: none;
+  }
+
+  #bullets {
+    display: flex;
+    justify-content: flex-end;
+  }
+  #bullets label {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 30px;
+    cursor: pointer;
+    margin: 0 5px;
+  }
+  #bullets span {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #DAA520;
+    border: 1px solid #000000;
+    transition: all 0.3s ease;
+  }
+  
+  #bullets label:hover span {
+    background-color: #A0522D;
+  }
+  
+  #btn-1:checked ~ #slides .inner {
+    margin-left: 0%;
+  }
+  #btn-2:checked ~ #slides .inner {
+    margin-left: -100%;
+  }
+  #btn-3:checked ~ #slides .inner {
+    margin-left: -200%;
+  }
+  #btn-4:checked ~ #slides .inner {
+    margin-left: -300%;
+  }
+  
+  #btn-1:checked ~ .wrapper label:nth-child(1) span,
+  #btn-2:checked ~ .wrapper label:nth-child(2) span,
+  #btn-3:checked ~ .wrapper label:nth-child(3) span,
+  #btn-4:checked ~ .wrapper label:nth-child(4) span {
+    background-color: #A52A2A;
+    border: 0.2rem solid #A52A2A;
+  }
+  
+  #btn-1:checked ~ .wrapper > .slide-text > div:nth-child(1),
+  #btn-2:checked ~ .wrapper > .slide-text > div:nth-child(2),
+  #btn-3:checked ~ .wrapper > .slide-text > div:nth-child(3),
+  #btn-4:checked ~ .wrapper > .slide-text > div:nth-child(4) {
+    opacity: 1;
+    display: block;
+    animation: anim 0.5s ease;
+  }
+
+  @keyframes anim {
+    0% {
+      opacity: 0;
+      transform: translate(30%);
+    }
+    100% {
+      opacity: 0.7;
+      transform: translate(0%);
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #slider {
+      padding-top: 0;
+    }
+    .slider-title {
+      padding: 20px 0;
+      font-size: 18px;
+    }
+    .wrapper {
+      flex-direction: column;
+      height: auto;
+      margin-top: 0;
+      align-items: center;
+    }
+    #bullets {
+      order: 1;
+      justify-content: center;
+      flex: 1 1 100%;
+      padding: 30px 0;
+    }
+    .slide-text {
+        order: 2;
+        margin-bottom: 25px;
+        font-size: 16px;
+      }
+
+    #bullets label {
+      width: 40px;
+      height: 40px;
+      margin: 0 1px;
+    }
+    #bullets span {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  
